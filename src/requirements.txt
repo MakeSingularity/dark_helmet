@@ -1,0 +1,3 @@
+# Python dependencies
+# List Python dependencies here
+# Example: numpy==1.24.3
