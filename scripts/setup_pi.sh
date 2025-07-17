@@ -6,4 +6,4 @@ PI_IP="192.168.1.103"
 PI_PATH="/home/rickmoranis/dark_helmet"
 
 echo "Setting up Raspberry Pi environment..."
-ssh $PI_USER@$PI_IP "mkdir -p $PI_PATH && sudo apt update && sudo apt install python3-pip -y && pip3 install -r $PI_PATH/requirements.txt"
+ssh $PI_USER@$PI_IP "mkdir -p $PI_PATH && sudo apt update && sudo apt install python3-pip -y && sudo apt install python3-numpy && sudo apt install python3-scipy && sudo apt install python3-sounddevice && sudo apt install libsox-fmt-all && pip3 install sox"
