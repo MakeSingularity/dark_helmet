@@ -1,8 +1,10 @@
-# Python dependencies for Dark Helmet project
-# Audio processing libraries
+# Python dependencies for Dark Helmet Voice Changer project
+# Core audio processing libraries
 numpy>=1.24.0
 scipy>=1.10.0
-sounddevice>=0.4.0
+sounddevice>=0.4.6
+
+# Audio effects processing
 sox>=1.4.0
 
 # System and utility libraries
@@ -13,3 +15,9 @@ python-dotenv>=1.0.0
 pytest>=7.0.0
 black>=23.0.0
 flake8>=6.0.0
+
+# Additional audio dependencies for Raspberry Pi
+# Note: Some system packages may need to be installed separately:
+# - portaudio19-dev (system package)
+# - libasound2-dev (system package) 
+# - libsox-fmt-all (system package)
