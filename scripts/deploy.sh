@@ -13,6 +13,15 @@ echo "Using SpaceBalls virtual environment"
 # Copy source files
 echo "📁 Copying source files..."
 scp -r ../src/* $PI_USER@$PI_IP:$PI_PATH/
+scp -r ../scripts $PI_USER@$PI_IP:$PI_PATH/
+scp ../DNSMASQ_FIX.md $PI_USER@$PI_IP:$PI_PATH/
+
+# Make scripts executable
+ssh $PI_USER@$PI_IP "chmod +x $PI_PATH/scripts/*.sh"
+
+# Fix dnsmasq if needed
+echo "🌐 Fixing dnsmasq service if needed..."
+ssh $PI_USER@$PI_IP "cd $PI_PATH && sudo ./scripts/fix_dnsmasq.sh || true"
 
 # Install/update requirements and run the voice changer
 echo "🔧 Setting up environment and starting voice changer..."

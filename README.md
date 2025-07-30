@@ -85,6 +85,20 @@ Access the control panel at `http://<device-ip>:8000`:
 - **Web interface not loading:** Verify port 8000 is available
 - **Installation issues:** Ensure SpaceBalls environment is active
 - **Performance issues:** Check CPU usage on Pi Zero 2 W
+- **dnsmasq service issues:** Run `sudo ./scripts/fix_dnsmasq.sh` (see `DNSMASQ_FIX.md`)
+
+## 📡 Network Configuration
+For standalone operation (no internet required):
+```bash
+cd scripts
+sudo ./setup_network.sh
+```
+This creates a WiFi hotspot: `Dark-Helmet-Voice-Changer` (Password: `SpaceBalls2024`)
+Access web interface at: `http://192.168.4.1`
+
+### Network Mode Switching
+- **Access Point mode:** `sudo darkhelmet-ap-mode`
+- **Station mode:** `sudo darkhelmet-sta-mode`
 
 See `VIRTUAL_ENV_SETUP.md` for detailed environment setup instructions.
 
