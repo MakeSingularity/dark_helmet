@@ -41,7 +41,7 @@ sudo tee /etc/hostapd/hostapd.conf > /dev/null << 'EOF'
 # Dark Helmet WiFi Hotspot Configuration
 interface=wlan0
 driver=nl80211
-ssid=Dark-Helmet-Voice-Changer
+ssid=DarkHelmet
 hw_mode=g
 channel=7
 wmm_enabled=0
