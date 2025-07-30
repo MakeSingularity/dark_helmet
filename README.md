@@ -86,6 +86,7 @@ Access the control panel at `http://<device-ip>:8000`:
 - **Installation issues:** Ensure SpaceBalls environment is active
 - **Performance issues:** Check CPU usage on Pi Zero 2 W
 - **dnsmasq service issues:** Run `sudo ./scripts/fix_dnsmasq.sh` (see `DNSMASQ_FIX.md`)
+- **SSID not showing up:** Run `sudo ./scripts/fix_wifi_ap.sh` (see `WIFI_TROUBLESHOOTING.md`)
 
 ## 📡 Network Configuration
 For standalone operation (no internet required):
@@ -93,8 +94,21 @@ For standalone operation (no internet required):
 cd scripts
 sudo ./setup_network.sh
 ```
-This creates a WiFi hotspot: `Dark-Helmet-Voice-Changer` (Password: `SpaceBalls2024`)
+This creates a WiFi hotspot: `DarkHelmet` (Password: `SpaceBalls2024`)
 Access web interface at: `http://192.168.4.1`
+
+### WiFi Troubleshooting
+If the SSID isn't visible:
+```bash
+# Check WiFi hardware compatibility
+sudo ./scripts/check_wifi_hardware.sh
+
+# Diagnose and fix AP issues  
+sudo ./scripts/fix_wifi_ap.sh
+
+# Restart AP mode with diagnostics
+sudo ./scripts/darkhelmet-ap-mode-improved.sh
+```
 
 ### Network Mode Switching
 - **Access Point mode:** `sudo darkhelmet-ap-mode`
